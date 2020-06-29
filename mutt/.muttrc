@@ -1,0 +1,30 @@
+# about me
+set from = "matthias.maile@tu-dortmund.de"
+set realname = "Matthias Maile"
+
+# credentials
+set smtp_url = "smtp://smmamail@tu-dortmund.de@unimail.tu-dortmund.de:587/"
+set smtp_pass = "ThIs PaSsWoRd Is SaVe"
+set imap_user = "myUsername"
+set imap_pass = "ThIs PaSsWoRd Is SaVe"
+
+# mailboxes
+set folder = "imaps://smmamail@unimail.tu-dortmund.de:993/"
+set spoolfile = "+INBOX"
+
+# where to put the stuff
+set header_cache = "~/apps/mutt/cache/headers"
+set message_cachedir = "~/apps/mutt/cache/bodies"
+set certificate_file = "~/apps/mutt/certificates"
+
+# misc
+set mail_check = 30
+set move = no
+set imap_keepalive = 900
+set sort = threads
+set editor = "vim"
+set timeout=10
+
+# for getting emails
+bind index G imap-fetch-mail
+bind pager G group-chat-reply
