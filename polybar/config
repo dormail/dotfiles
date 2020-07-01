@@ -1,26 +1,31 @@
 [bar/mybar]
-modules-right = backlight
+font-0 = NotoSans Nerd Font:style=Condensed:pixelsize=12;2
+font-1 = xft:bitstream vera sans mono:pixelsize=12;2
+
+modules-right = date
 bottom = false
 
 [module/date]
 type = internal/date
-date = %y-%m-%d%
 
-format = <label>
+label = %date% %time%
+label-font = 1
+label-foreground = #FFFFFF
 
-; Available tokens:
-;   %percentage% (default)
-label = %percentage%%
+; Seconds to sleep between updates
+; Default: 1.0
+interval = 1.0
 
-; Only applies if <ramp> is used
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
+; See "https://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = %Y-%m-%d%
 
-; Only applies if <bar> is used
-bar-width = 10
-bar-indicator = |
-bar-fill = ─
-bar-empty = ─
+; Optional time format
+time = %H:%M
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+
+
