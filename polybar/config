@@ -10,13 +10,53 @@ font-0 = "Iosevka"
 font-1 = Font Awesome 5 Free:pixelsize=10;3
 font-2 = Font siji:pixelsize=10;3
 
-modules-right = wired-network wireless-network backlight pulseaudio battery
-modules-center = date
+modules-left = i3 
+modules-right = wired-network wireless-network backlight pulseaudio battery date
+modules-center = title
 module-margin = 1
 bottom = false
 
-wm-name = i3
+fixed-center = false
+
+padding = 1.5
+
+wm-name = i3-wm
 locale = en_US.UTF-8
+
+[module/title]
+type = internal/xwindow
+format = <label>
+format-padding = 1
+
+[module/i3]
+type = internal/i3
+
+enable-scroll = false
+
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-defualt = d
+
+format = <label-state>
+
+label-mode = %index%
+
+label-focused = %index%
+label-focused-background = #333333
+label-focused-padding = 1
+
+label-unfocused = %index%
+label-unfocused-background = #000000
+label-unfocused-padding = 1
+
+label-urgent = %index%
+label-urgent-background = #990000
+label-urgent-padding = 1
 
 [module/battery]
 type = internal/battery
