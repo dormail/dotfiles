@@ -44,8 +44,11 @@ label-indicator-off-scrolllock =
 ; module showing name of active window
 [module/title]
 type = internal/xwindow
+
 format = <label>
 format-padding = 1
+
+label-maxlen = 80
 
 [module/i3]
 type = internal/i3
