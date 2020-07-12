@@ -77,13 +77,6 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation 
-# deactivated for vim-like controlls
-# bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
@@ -91,6 +84,10 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+
+# vertical split with $mod+v, horizontal with $mod+Shift+v
+bindsym $mod+v split v
+bindsym $mod+Shift+v split h
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -183,11 +180,13 @@ mode "launcher" {
 	# t - terminal
 	# g - gimp
 	# p - pavucontrol
+	# c - chromium
 	bindsym f exec firefox
 	bindsym s exec spotify
 	bindsym t exec i3-sensible-terminal
 	bindsym g exec gimp
 	bindsym p exec pavucontrol
+	bindsym c exec chromium
 
         # back to normal: Enter or Escape or $mod+p
         bindsym Return mode "default"
@@ -213,14 +212,20 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-  # decrease screen bri
 bindsym XF86Launch1 exec  i3lock -f -e -i ~/Images/lockscreen.png -t
 
 # automatic screen lock with xautolock deactivated
-#exec_always xautolock -time 5 -locker "i3lock -f -e -i ~/Images/lockscreen.png -t" -killtime 10 -killer "systemctl suspend" -secure
+exec_always xautolock -time 5 -locker "i3lock -f -e -i ~/Images/lockscreen.png -t" -killtime 10 -killer "systemctl suspend" -secure
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # background image
 exec_always  feh --bg-fill ~/Images/background.jpg # multimedia keys bindsym XF86AudioPlay  exec "mpc toggle"
-bindsym XF86AudioStop  exec "mpc stop"
-bindsym XF86AudioNext  exec "mpc next"
-bindsym XF86AudioPrev  exec "mpc prev"
-bindsym XF86AudioPause exec "mpc pause"
+#bindsym XF86AudioStop  exec "mpc stop"
+#bindsym XF86AudioNext  exec "mpc next"
+#bindsym XF86AudioPrev  exec "mpc prev"
+#bindsym XF86AudioPause exec "mpc pause"
 
 # assign firefox to $ws2
 assign [class="firefox"] workspace $ws2
