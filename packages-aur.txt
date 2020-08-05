@@ -1,11 +1,11 @@
-bluez-hcitool 5.45-1
-bluez-rfcomm 5.45-1
-otf-font-awesome-4 4.7.0-5
-polybar 3.4.3-2
-siji-git r23.c691f20-1
-spotify 1:1.1.10.546-4
-spotify-tui 0.21.0-1
-ttf-font-awesome-4 4.7.0-5
-ttf-iosevka 3.3.1-1
-twmn-git 190.861a323-1
-zoom 5.1.418436.0628-1
+bluez-hcitool
+bluez-rfcomm
+otf-font-awesome-4
+polybar
+siji-git
+spotify
+spotify-tui
+ttf-font-awesome-4
+ttf-iosevka
+twmn-git
+zoom
