@@ -238,10 +238,10 @@ bindsym XF86ScreenSaver exec $screensaver
 bindsym $mod+XF86Launch1 exec  $screensaver && systemctl suspend
 
 # Media controls
-bindsym XF86AudioStop  exec "mpc stop"
-bindsym XF86AudioNext  exec "mpc next"
-bindsym XF86AudioPrev  exec "mpc prev"
-bindsym XF86AudioPause exec "mpc pause"
+bindsym XF86AudioStop  exec "playerctl stop"
+bindsym XF86AudioNext  exec "playerctl next"
+bindsym XF86AudioPrev  exec "playerctl previous"
+bindsym XF86AudioPause exec "playerctl play-pause"
 
 # automatic screen lock with xautolock deactivated
 exec_always xautolock -time 5 -locker "i3lock -f -e -i ~/Images/lockscreen.png -t" -killtime 10 -killer "systemctl suspend" -secure
