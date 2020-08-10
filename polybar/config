@@ -56,7 +56,7 @@ type = internal/i3
 enable-scroll = false
 
 ws-icon-0 = 1;: 
-ws-icon-1 = 2;: 龜
+ws-icon-1 = 2;: 
 ws-icon-2 = 3;: 
 ws-icon-3 = 4;: 
 ws-icon-4 = 5;: 
@@ -148,7 +148,7 @@ format-muted-padding = 1
 format-volume-padding = 1
 
 type = internal/pulseaudio
-sink = alsa_output.pci-0000_12_00.3.analog-stereo
+; sink = alsa_output.pci-0000_12_00.3.analog-stereo
 
 label-volume =  %percentage%%
 
