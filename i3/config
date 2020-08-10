@@ -247,7 +247,7 @@ bindsym XF86AudioPause exec "playerctl play-pause"
 exec_always xautolock -time 5 -locker "i3lock -f -e -i ~/Images/lockscreen.png -t" -killtime 10 -killer "systemctl suspend" -secure
 
 # background image
-exec_always  feh --bg-fill ~/Images/background.jpg # multimedia keys bindsym XF86AudioPlay  exec "mpc toggle"
+exec_always  feh --bg-fill ~/Images/background.jpg
 
 # assign programms to workspaces
 # firefox -> $ws2
@@ -287,3 +287,6 @@ exec twmnd
 
 # start bluetooth at start up
 exec bluetoothctl power on
+
+# printscreen
+bindsym Print exec scrot
