@@ -225,4 +225,8 @@ gaps inner 10
 smart_gaps on
 for_window [class=".*"] border pixel 0
 
+# ThinkVantage Button
+set $screensaver swaylock -i Pictures/bg.jpg -l
+bindsym XF86Launch1 exec $screensaver
+
 include /etc/sway/config.d/*
