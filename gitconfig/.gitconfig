@@ -1,0 +1,14 @@
+[user]
+	email 		= matthias.maile@udo.edu
+	name 		= Matthias Maile
+
+[core]
+	editor 		= vim
+	pager		= less
+
+[diff]
+	tool 		= vimdiff
+
+[color]
+	ui 		= true
+
